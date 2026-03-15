@@ -1,0 +1,29 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Database
+*.db
+
+# Embeddings cache
+embeddings/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+dist/
+.vercel/
+
+# Temp
+tmp/
