@@ -1,0 +1,161 @@
+[INFO] Found binary: build/ndd-neon-darwin
+INFO_1703: -/-: NEON is supported and usable
+INFO: -/-: SERVER_ID: unknown
+INFO: -/-: SERVER_PORT: 8080
+INFO: -/-: DATA_DIR: ./data
+INFO: -/-: NUM_PARALLEL_INSERTS: 4
+INFO: -/-: NUM_RECOVERY_THREADS: 16
+INFO: -/-: MAX_MEMORY_GB: 24
+INFO: -/-: ENABLE_DEBUG_LOG: 1
+INFO: -/-: AUTH_TOKEN: 
+INFO: -/-: AUTH_ENABLED: 0
+INFO: -/-: DEFAULT_USERNAME: endee
+INFO: -/-: DEFAULT_SERVER_TYPE: OSS
+INFO: -/-: DEFAULT_DATA_DIR: /mnt/data
+INFO: -/-: DEFAULT_MAX_ACTIVE_INDICES: 64
+INFO: -/-: DEFAULT_MAX_ELEMENTS: 100000
+INFO: -/-: DEFAULT_MAX_ELEMENTS_INCREMENT: 100000
+INFO: -/-: DEFAULT_MAX_ELEMENTS_INCREMENT_TRIGGER: 50000
+INFO_1005: -/-: Starting the server
+INFO_1102: -/-: Authentication disabled; running in open mode
+INFO_1006: -/-: Created auth manager
+INFO_1007: -/-: Created index manager
+INFO_2011: -/-: Autosave thread started
+INFO_1008: -/-: Using: 16 server threads.
+(2026-03-15 12:20:13) [INFO    ] Crow/master server is running at http://0.0.0.0:8080 using 16 threads
+(2026-03-15 12:20:13) [INFO    ] Call `app.loglevel(crow::LogLevel::Warning)` to hide Info level logs.
+(2026-03-15 12:20:47) [INFO    ] Request: 127.0.0.1:50196 0x105633f68 HTTP/1.1 GET /api/v1/index/jobs/info
+INFO_2101: -/-: Calculated cache bits for loaded index: 17
+INFO_2001: endee/jobs: Creating cache entry
+INFO_2005: endee/jobs: Assigning index id
+INFO_2006: endee/jobs: Moving algorithm instance
+INFO_2007: endee/jobs: Cache entry construction completed
+(2026-03-15 12:20:47) [INFO    ] Response: 0x105633f68 /api/v1/index/jobs/info 200 0
+(2026-03-15 12:20:49) [INFO    ] Request: 127.0.0.1:50196 0x105633f68 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:20:49) [INFO    ] Response: 0x105633f68 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:21:47) [INFO    ] Request: 127.0.0.1:50210 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:21:47) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:22:15) [INFO    ] Request: 127.0.0.1:50224 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:22:15) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:24:26) [INFO    ] Request: 127.0.0.1:50257 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:24:26) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:24:49) [INFO    ] Request: 127.0.0.1:50275 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 12:24:49) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 12:24:49) [INFO    ] Request: 127.0.0.1:50275 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:24:49) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:25:11) [INFO    ] Request: 127.0.0.1:50279 0xad701c018 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 12:25:11) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/info 200 0
+(2026-03-15 12:25:11) [INFO    ] Request: 127.0.0.1:50279 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:25:11) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 12:25:56) [INFO    ] Request: 127.0.0.1:50286 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 12:25:56) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 12:25:56) [INFO    ] Request: 127.0.0.1:50286 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:25:56) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+(2026-03-15 12:28:42) [INFO    ] Request: 127.0.0.1:50311 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:28:42) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 12:38:25) [INFO    ] Request: 127.0.0.1:50423 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 12:38:25) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 12:38:26) [INFO    ] Request: 127.0.0.1:50423 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:38:26) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 12:50:15) [INFO    ] Request: 127.0.0.1:50550 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 12:50:15) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 13:03:43) [INFO    ] Request: 127.0.0.1:50753 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 13:03:43) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 15:58:53) [INFO    ] Request: 127.0.0.1:51377 0xad701c018 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 15:58:53) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:00:29) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 16:00:29) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:00:29) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:29) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:00:30) [INFO    ] Request: 127.0.0.1:51402 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/vector/insert
+(2026-03-15 16:00:30) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/vector/insert 200 0
+(2026-03-15 16:01:51) [INFO    ] Request: 127.0.0.1:51433 0xad701c018 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 16:01:51) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:01:51) [INFO    ] Request: 127.0.0.1:51433 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:01:51) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:14:43) [INFO    ] Request: 127.0.0.1:51724 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 16:14:43) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:14:43) [INFO    ] Request: 127.0.0.1:51724 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:14:43) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+(2026-03-15 16:15:32) [INFO    ] Request: 127.0.0.1:51746 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:15:32) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:20:54) [INFO    ] Request: 127.0.0.1:51908 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 16:20:54) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:20:54) [INFO    ] Request: 127.0.0.1:51908 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:20:54) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:23:17) [INFO    ] Request: 127.0.0.1:52068 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:23:17) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:32:19) [INFO    ] Request: 127.0.0.1:52178 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:32:19) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:43:01) [INFO    ] Request: 127.0.0.1:52398 0xad701c018 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 16:43:01) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/info 200 0
+(2026-03-15 16:43:01) [INFO    ] Request: 127.0.0.1:52398 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:43:01) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+(2026-03-15 16:46:24) [INFO    ] Request: 127.0.0.1:52452 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 16:46:24) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 17:44:05) [INFO    ] Request: 127.0.0.1:53617 0xad701c018 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 17:44:05) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/info 200 0
+(2026-03-15 17:44:05) [INFO    ] Request: 127.0.0.1:53617 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 17:44:05) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 17:47:49) [INFO    ] Request: 127.0.0.1:53710 0xad701d418 HTTP/1.1 GET /api/v1/index/jobs/info
+(2026-03-15 17:47:49) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/info 200 0
+(2026-03-15 17:47:49) [INFO    ] Request: 127.0.0.1:53710 0xad701d418 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 17:47:49) [INFO    ] Response: 0xad701d418 /api/v1/index/jobs/search 200 0
+(2026-03-15 17:50:06) [INFO    ] Request: 127.0.0.1:53757 0xad701c018 HTTP/1.1 POST /api/v1/index/jobs/search
+(2026-03-15 17:50:06) [INFO    ] Response: 0xad701c018 /api/v1/index/jobs/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
