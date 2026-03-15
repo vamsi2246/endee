@@ -2,12 +2,10 @@ services:
   - type: web
     name: ai-career-assistant-api
     runtime: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.9.18"
+        value: "3.11.0"
       - key: OPENAI_API_KEY
         sync: false
-      - key: JWT_SECRET_KEY
-        generateValue: true
