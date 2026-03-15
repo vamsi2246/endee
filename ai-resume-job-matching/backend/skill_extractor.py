@@ -1,9 +1,6 @@
 import re
 
 
-# ─── Skill Extractor with spaCy fallback ─────────────────────
-
-# Comprehensive list of tech skills
 SKILLS_LIST = [
     "Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Go", "Rust", "Ruby", "PHP",
     "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "TensorFlow", "PyTorch", "Scikit-Learn", "Keras",
@@ -22,28 +19,35 @@ class SkillExtractor:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(SkillExtractor, cls).__new__(cls)
+            cls._instance._initialized = False
             cls._instance._use_spacy = False
-            try:
-                import spacy
-                from spacy.matcher import PhraseMatcher
-                try:
-                    nlp = spacy.load("en_core_web_sm")
-                except OSError:
-                    from spacy.cli import download
-                    download("en_core_web_sm")
-                    nlp = spacy.load("en_core_web_sm")
-                cls._instance.nlp = nlp
-                cls._instance.matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
-                patterns = [nlp.make_doc(text) for text in SKILLS_LIST]
-                cls._instance.matcher.add("SKILLS", patterns)
-                cls._instance._use_spacy = True
-                print("SkillExtractor: Using spaCy PhraseMatcher")
-            except Exception as e:
-                print(f"SkillExtractor: spaCy not available ({e}), using regex fallback")
-                cls._instance._use_spacy = False
         return cls._instance
 
+    def _init_if_needed(self):
+        if self._initialized:
+            return
+        self._initialized = True
+        try:
+            import spacy
+            from spacy.matcher import PhraseMatcher
+            try:
+                nlp = spacy.load("en_core_web_sm")
+            except OSError:
+                from spacy.cli import download
+                download("en_core_web_sm")
+                nlp = spacy.load("en_core_web_sm")
+            self.nlp = nlp
+            self.matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
+            patterns = [nlp.make_doc(text) for text in SKILLS_LIST]
+            self.matcher.add("SKILLS", patterns)
+            self._use_spacy = True
+            print("SkillExtractor: Using spaCy PhraseMatcher")
+        except Exception as e:
+            print(f"SkillExtractor: spaCy not available ({e}), using regex fallback")
+            self._use_spacy = False
+
     def extract_skills(self, text: str) -> list[str]:
+        self._init_if_needed()
         if self._use_spacy:
             return self._extract_spacy(text)
         return self._extract_regex(text)
@@ -58,7 +62,6 @@ class SkillExtractor:
         return list(extracted)
 
     def _extract_regex(self, text: str) -> list[str]:
-        """Regex-based fallback when spaCy is not installed."""
         extracted = set()
         text_lower = text.lower()
         for skill in SKILLS_LIST:
