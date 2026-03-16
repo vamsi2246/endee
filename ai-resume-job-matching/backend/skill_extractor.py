@@ -14,52 +14,27 @@ SKILLS_LIST = [
 
 
 class SkillExtractor:
+    """
+    Extracts skills from resume text using regex pattern matching.
+    Lightweight alternative to spaCy for Render free tier deployment.
+    """
     _instance = None
 
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(SkillExtractor, cls).__new__(cls)
             cls._instance._initialized = False
-            cls._instance._use_spacy = False
         return cls._instance
 
     def _init_if_needed(self):
         if self._initialized:
             return
         self._initialized = True
-        try:
-            import spacy
-            from spacy.matcher import PhraseMatcher
-            try:
-                nlp = spacy.load("en_core_web_sm")
-            except OSError:
-                from spacy.cli import download
-                download("en_core_web_sm")
-                nlp = spacy.load("en_core_web_sm")
-            self.nlp = nlp
-            self.matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
-            patterns = [nlp.make_doc(text) for text in SKILLS_LIST]
-            self.matcher.add("SKILLS", patterns)
-            self._use_spacy = True
-            print("SkillExtractor: Using spaCy PhraseMatcher")
-        except Exception as e:
-            print(f"SkillExtractor: spaCy not available ({e}), using regex fallback")
-            self._use_spacy = False
+        print("SkillExtractor: Using regex pattern matching")
 
     def extract_skills(self, text: str) -> list[str]:
         self._init_if_needed()
-        if self._use_spacy:
-            return self._extract_spacy(text)
         return self._extract_regex(text)
-
-    def _extract_spacy(self, text: str) -> list[str]:
-        doc = self.nlp(text)
-        matches = self.matcher(doc)
-        extracted = set()
-        for match_id, start, end in matches:
-            span = doc[start:end]
-            extracted.add(span.text.title())
-        return list(extracted)
 
     def _extract_regex(self, text: str) -> list[str]:
         extracted = set()
